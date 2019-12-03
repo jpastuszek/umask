@@ -176,6 +176,12 @@ impl Mode {
     }
 }
 
+impl Into<u32> for Mode {
+    fn into(self) -> u32 {
+        self.value
+    }
+}
+
 #[test]
 fn test_build() {
     let mut m = Mode::new()
